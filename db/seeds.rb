@@ -20,11 +20,11 @@ Review.destroy_all
                                 category: ['chinese', 'italian', 'japanese', 'french', 'belgian'].sample
               )
 
-  # Review.create(
-  #   rating: rand(0..5),
-  #   content: Faker::Restaurant.review,
-  #   restaurant: tmp_rest
-  # )
+  Review.create(
+    rating: rand(0..5),
+    content: Faker::Restaurant.review,
+    restaurant_id: tmp_rest.id
+  )
 end
 
 puts "Done..."
