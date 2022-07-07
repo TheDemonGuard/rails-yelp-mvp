@@ -1,0 +1,12 @@
+<%= simple_form_for(restaurant) do |f| %>
+  <%= f.input :name %>
+  <%# <%= f.text_field :name %>
+  <%= f.input :address %>
+  <%# <%= f.text_field :address %>
+  <%= f.input :phone_number %>
+  <%# <%= f.number_field :phone_number %>
+  <%# <%= f.input :category %>
+  <%# <%= f.text_field :category %>
+  <%= f.input :category, collection: Restaurant::CATEGORY %>
+  <%= f.submit "Add new restaurant" , class: "btn btn-primary" %>
+<% end %>
